@@ -3,11 +3,10 @@ import React from 'react'
 import { nanoid } from 'nanoid'
 
 
-const Unique = () => {
-    var id
-    id = nanoid()
+const Unique = (props) => {
+
   return (
-    <div>{id}</div>
+    <div>{props.id}</div>
   )
 }
 

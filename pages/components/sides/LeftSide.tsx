@@ -2,7 +2,6 @@ import React from 'react'
 import PersonalInfo from "../forms/PersonalInfo"
 import Experience from "../forms/Experience"
 import Education from "../forms/Education"
-import Buttons from "../buttons/Buttons"
 
 const LeftSide = () => {
   return (
@@ -10,7 +9,7 @@ const LeftSide = () => {
         <PersonalInfo/>
         <Experience/>
         <Education/>
-        <Buttons/>
+        {/*<AddButton/> temporarily in index.tsx*/}
     </div>
   )
 }

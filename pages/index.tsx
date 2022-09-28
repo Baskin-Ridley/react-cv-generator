@@ -2,6 +2,7 @@ import { useState } from "react"
 import LeftSide from "./components/sides/LeftSide"
 import RightSide from "./components/sides/RightSide"
 import Unique from "./components/experimental/Unique"
+import { AddButton } from "./components/buttons/AddButton"
 import { nanoid } from 'nanoid'
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
     <div className="grid grid-cols-2">
       <div>
         <LeftSide/>
-        <Button onClick={addComponent} text="Call Component"/> 
-        {components.map((item, i) => ( <ListComponent text={item} /> ))} 
+        <Unique id = {nanoid()}/>
+        <Unique id = {nanoid()}/>
       </div>
 
       <div className="hidden lg:block">

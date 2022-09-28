@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div className="grid grid-cols-2">
       <LeftSide/>
-      <RightSide/>
+      <div className="hidden lg:block">
+        <RightSide/>
+      </div>
+
     </div>
   )
 }

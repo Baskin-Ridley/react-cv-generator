@@ -12,6 +12,7 @@ export default function Home() {
   function addComponent() { 
     
     setComponents([...components, <Unique id = {nanoid()}/>]) 
+    console.log(components)
   } 
 
 
@@ -20,7 +21,7 @@ export default function Home() {
       <div>
         <LeftSide/>
         <AddButton onClick={addComponent} text="Add ID"/> 
-        {components.map((item, i) => ( components ))} 
+        {components.map(() => ( <Unique id = {nanoid()}/> ))} 
       </div>
 
       <div className="hidden lg:block">

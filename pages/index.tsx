@@ -1,7 +1,11 @@
+import LeftSide from "./components/sides/LeftSide"
+import RightSide from "./components/sides/RightSide"
+
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="grid grid-cols-2">
+      <LeftSide/>
+      <RightSide/>
+    </div>
   )
 }

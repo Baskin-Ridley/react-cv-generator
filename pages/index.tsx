@@ -1,4 +1,4 @@
-//@ts-nocheck
+
 import LeftSide from "./components/sides/LeftSide"
 import RightSide from "./components/sides/RightSide"
 import Unique from "./components/experimental/Unique"

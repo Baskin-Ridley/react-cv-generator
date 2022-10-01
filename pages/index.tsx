@@ -18,9 +18,9 @@ export default function Home() {
     <div className="grid grid-cols-2">
       <div>
         <LeftSide/>
-        <AddButton onClick={addComponent} text="Add ID"/> 
-        {components.map((component) => component)}
 
+        {components.map((component) => component)}
+        <AddButton onClick={addComponent} text="Add ID"/> 
       </div>
 
       <div className="hidden lg:block">

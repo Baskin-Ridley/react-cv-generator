@@ -7,11 +7,12 @@ const PersonalInfo = () => {
     email: '',
     phone: '',
     city: '',
+    description: '',
   })
   return (
     <div>
       <h1 className="font-bold">Personal Information</h1>
-      <form className="grid lg:grid-cols-2 md:grid-cols-1">
+      <form className="grid grid-cols-1">
         <div>
           <input
             type="text"
@@ -72,6 +73,20 @@ const PersonalInfo = () => {
             }}
           />          
         </div>
+        <div>
+          <textarea
+            id="description"
+            name="description"
+            placeholder='Description'
+            value={personalInfo.description}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                description: e.target.value,
+              })
+            }}
+            />          
+          </div>
       </form>
     </div>
   )

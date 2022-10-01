@@ -9,8 +9,7 @@ export default function Home() {
 
   const [components, setComponents] = useState([<Unique id = {nanoid()}/>]); 
   
-  function addComponent() { 
-    
+  function addComponent() {   
     setComponents([...components, <Unique id = {nanoid()}/>]) 
   } 
 
@@ -20,7 +19,8 @@ export default function Home() {
       <div>
         <LeftSide/>
         <AddButton onClick={addComponent} text="Add ID"/> 
-        {components.map((item, i) => ( components ))} 
+        {components.map((component) => component)}
+
       </div>
 
       <div className="hidden lg:block">

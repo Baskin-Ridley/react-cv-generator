@@ -3,7 +3,8 @@ import React from 'react'
 const PersonalInfo = () => {
 
   const [personalInfo, setPersonalInfo] = React.useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     city: '',
@@ -16,18 +17,33 @@ const PersonalInfo = () => {
         <div>
           <input
             type="text"
-            id="name"
-            name="name"
-            placeholder='Name'
-            value={personalInfo.name}
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            value={personalInfo.firstName}
             onChange={(e) => {
               setPersonalInfo({
                 ...personalInfo,
-                name: e.target.value,
+                firstName: e.target.value,
               })
             }}
           />
         </div>
+        <div>
+          <input
+            type="text"
+            id="Last Name"
+            name="Last Name"
+            placeholder="Last Name"
+            value={personalInfo.lastName}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                lastName: e.target.value,
+              })
+            }}
+          />
+        </div>        
         <div>
           <input
             type="text"

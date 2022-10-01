@@ -6,80 +6,73 @@ const PersonalInfo = () => {
     name: '',
     email: '',
     phone: '',
-    address: '',
     city: '',
   })
   return (
     <div>
-      <form>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={personalInfo.name}
-          onChange={(e) => {
-            setPersonalInfo({
-              ...personalInfo,
-              name: e.target.value,
-            })
-          }}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          value={personalInfo.email}
-          onChange={(e) => {
-            setPersonalInfo({
-              ...personalInfo,
-              email: e.target.value,
-            })
-          }}
-        />
-        <label htmlFor="phone">Phone</label>
-        <input
-          type="text"
-          id="phone"
-          name="phone"
-          value={personalInfo.phone}
-          onChange={(e) => {
-            setPersonalInfo({
-              ...personalInfo,
-              phone: e.target.value,
-            })
-          }}
-        />
-        <label htmlFor="address">Address</label>
-        <input
-          type="text"
-          id="address"
-          name="address"
-          value={personalInfo.address}
-          onChange={(e) => {
-            setPersonalInfo({
-              ...personalInfo,
-              address: e.target.value,
-            })
-          }}
-        />
-        <label htmlFor="city">City</label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          value={personalInfo.city}
-          onChange={(e) => {
-            setPersonalInfo({
-              ...personalInfo,
-              city: e.target.value,
-            })
-          }}
-        />
+      <h1>Personal Information</h1>
+      <form className="grid lg:grid-cols-2 md:grid-cols-1">
+        <div>
+          <label className="" htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={personalInfo.name}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                name: e.target.value,
+              })
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            value={personalInfo.email}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                email: e.target.value,
+              })
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={personalInfo.phone}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                phone: e.target.value,
+              })
+            }}
+          />          
+        </div>
+        <div>
+          <label htmlFor="city">City</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            value={personalInfo.city}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                city: e.target.value,
+              })
+            }}
+          />          
+        </div>
       </form>
-
-      
     </div>
   )
 }

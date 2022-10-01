@@ -7,6 +7,15 @@ import { nanoid } from 'nanoid'
 
 export default function Home() {
 
+  const [personalInfo, setPersonalInfo] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    city: '',
+    description: '',
+  })
+
   const [components, setComponents] = useState([<Unique id = {nanoid()}/>]); 
   
   function addComponent() {   

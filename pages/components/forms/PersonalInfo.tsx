@@ -1,111 +1,88 @@
-import React from 'react'
+import {useState, useReducer} from 'react'
 
 const PersonalInfo = () => {
 
-  const [personalInfo, setPersonalInfo] = React.useState({
+  //useReducer to update personal info
+  const initialState = {
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     city: '',
     description: '',
-  })
+  }
+
+  const reducer = (state: any, action: { type: any; value: any }) => {
+    switch (action.type) {
+      case 'firstName':
+        return {...state, firstName: action.value}
+      case 'lastName':
+        return {...state, lastName: action.value}
+      case 'email':
+        return {...state, email: action.value}
+      case 'phone':
+        return {...state, phone: action.value}
+      case 'city':
+        return {...state, city: action.value}
+      case 'description':
+        return {...state, description: action.value}
+      default:
+        return state
+    }
+  }
+
+  const [personalInfo, dispatch] = useReducer(reducer, initialState)
+
   return (
     <div>
       <h1 className="font-bold">Personal Information</h1>
       <form className="grid grid-cols-1">
-        <div>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="First Name"
-            value={personalInfo.firstName}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                firstName: e.target.value,
-              })
-            }}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            id="Last Name"
-            name="Last Name"
-            placeholder="Last Name"
-            value={personalInfo.lastName}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                lastName: e.target.value,
-              })
-            }}
-          />
-        </div>        
-        <div>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder='Email'
-            value={personalInfo.email}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                email: e.target.value,
-              })
-            }}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder='Phone Number'
-            value={personalInfo.phone}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                phone: e.target.value,
-              })
-            }}
-          />          
-        </div>
-        <div>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            placeholder='City'
-            value={personalInfo.city}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                city: e.target.value,
-              })
-            }}
-          />          
-        </div>
-        <div>
-          <textarea
-            id="description"
-            name="description"
-            placeholder='Description'
-            value={personalInfo.description}
-            onChange={(e) => {
-              setPersonalInfo({
-                ...personalInfo,
-                description: e.target.value,
-              })
-            }}
-            />          
-          </div>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="firstName"
+          type="text"
+          placeholder="First Name"
+          onChange={(e) => dispatch({type: 'firstName', value: e.target.value})}
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="lastName"
+          type="text"
+          placeholder="Last Name"
+          onChange={(e) => dispatch({type: 'lastName', value: e.target.value})}
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="email"
+          type="text"
+          placeholder="Email"
+          onChange={(e) => dispatch({type: 'email', value: e.target.value})}
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="phone"
+          type="text"
+          placeholder="Phone"
+          onChange={(e) => dispatch({type: 'phone', value: e.target.value})}
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="city"
+          type="text"
+          placeholder="City"
+          onChange={(e) => dispatch({type: 'city', value: e.target.value})}
+        />
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="description"
+          type="text"
+          placeholder="Description"
+          onChange={(e) => dispatch({type: 'description', value: e.target.value})}
+        />     
       </form>
     </div>
   )
 }
 
 export default PersonalInfo
+

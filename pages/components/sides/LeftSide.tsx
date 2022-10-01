@@ -6,7 +6,7 @@ import Education from "../forms/Education"
 const LeftSide = () => {
   return (
     <div>
-        <PersonalInfo/>
+        <PersonalInfo />
         <Experience/>
         <Education/>
         {/*<AddButton/> temporarily in index.tsx*/}

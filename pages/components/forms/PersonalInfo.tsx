@@ -1,8 +1,10 @@
-import {useState, useReducer} from 'react'
+import {createContext, useContext, useReducer} from 'react'
+
+
+
 
 const PersonalInfo = () => {
 
-  //useReducer to update personal info
   const initialState = {
     firstName: '',
     lastName: '',
@@ -11,6 +13,8 @@ const PersonalInfo = () => {
     city: '',
     description: '',
   }
+
+  const PersonalInfoContext = createContext(initialState)  
 
   const reducer = (state: any, action: { type: any; value: any }) => {
     switch (action.type) {

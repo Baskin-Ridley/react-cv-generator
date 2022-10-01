@@ -10,14 +10,14 @@ const PersonalInfo = () => {
   })
   return (
     <div>
-      <h1>Personal Information</h1>
+      <h1 className="font-bold">Personal Information</h1>
       <form className="grid lg:grid-cols-2 md:grid-cols-1">
         <div>
-          <label className="" htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
+            placeholder='Name'
             value={personalInfo.name}
             onChange={(e) => {
               setPersonalInfo({
@@ -28,11 +28,11 @@ const PersonalInfo = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Email</label>
           <input
             type="text"
             id="email"
             name="email"
+            placeholder='Email'
             value={personalInfo.email}
             onChange={(e) => {
               setPersonalInfo({
@@ -43,11 +43,11 @@ const PersonalInfo = () => {
           />
         </div>
         <div>
-          <label htmlFor="phone">Phone</label>
           <input
             type="text"
             id="phone"
             name="phone"
+            placeholder='Phone Number'
             value={personalInfo.phone}
             onChange={(e) => {
               setPersonalInfo({
@@ -58,11 +58,11 @@ const PersonalInfo = () => {
           />          
         </div>
         <div>
-          <label htmlFor="city">City</label>
           <input
             type="text"
             id="city"
             name="city"
+            placeholder='City'
             value={personalInfo.city}
             onChange={(e) => {
               setPersonalInfo({

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RightSide = (props) => {
+const RightSide = (props: { components: any[] }) => {
   return (
     <div>
       {props.components.map((component) => component)}

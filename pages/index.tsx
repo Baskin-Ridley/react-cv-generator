@@ -18,7 +18,6 @@ export default function Home() {
     <div className="grid grid-cols-2">
       <div>
         <LeftSide/>
-
         {components.map((component) => component)}
         <AddButton onClick={addComponent} text="Add ID"/> 
       </div>

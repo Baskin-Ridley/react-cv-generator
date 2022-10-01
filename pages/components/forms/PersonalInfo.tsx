@@ -1,9 +1,30 @@
-import {createContext, useContext, useReducer} from 'react'
 
-
-
+import {createContext, useContext, useReducer, useState} from 'react'
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 const PersonalInfo = () => {
+
+//create atom for personal info
+
+const personalInfoAtom = atom({
+  key: 'personalInfoAtom',
+  default: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    city: '',
+    description: ''
+  },
+});
+
+const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
 
   const initialState = {
     firstName: '',
@@ -14,7 +35,6 @@ const PersonalInfo = () => {
     description: '',
   }
 
-  const PersonalInfoContext = createContext(initialState)  
 
   const reducer = (state: any, action: { type: any; value: any }) => {
     switch (action.type) {
@@ -35,19 +55,26 @@ const PersonalInfo = () => {
     }
   }
 
-  const [personalInfo, dispatch] = useReducer(reducer, initialState)
+  const [personalInfo2, dispatch] = useReducer(reducer, initialState)
 
   return (
     <div>
       <h1 className="font-bold">Personal Information</h1>
       <form className="grid grid-cols-1">
         <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="firstName"
-          type="text"
-          placeholder="First Name"
-          onChange={(e) => dispatch({type: 'firstName', value: e.target.value})}
-        />
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            value={personalInfo.firstName}
+            onChange={(e) => {
+              setPersonalInfo({
+                ...personalInfo,
+                firstName: e.target.value,
+              })
+            }}
+          />
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="lastName"

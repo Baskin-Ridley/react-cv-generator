@@ -1,8 +1,10 @@
 import React from 'react'
 
-const RightSide = () => {
+const RightSide = (props) => {
   return (
-    <div>RightSide</div>
+    <div>
+      {props.components.map((component) => component)}
+    </div>
   )
 }
 

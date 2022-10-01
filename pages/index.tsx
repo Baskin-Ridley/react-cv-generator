@@ -24,7 +24,7 @@ export default function Home() {
       </div>
 
       <div className="hidden lg:block">
-        <RightSide/>
+        <RightSide components = {components}/>
       </div>
 
     </div>

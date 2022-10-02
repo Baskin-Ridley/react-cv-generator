@@ -16,12 +16,13 @@ import {
 } from 'recoil';
 export default function Home() {
 
-  const [components, setComponents] = useState([<Education id = {nanoid()}/>]); 
+  const [components, setComponents] = useState([<Education id={nanoid()}/>]); 
   
   function addComponent() {   
-    setComponents([...components, <Education id = {nanoid()}/>]) 
+    setComponents([...components, <Education id={nanoid()}/>]) 
   } 
 
+  console.log({components})
 
   return (
 
@@ -35,7 +36,7 @@ export default function Home() {
           <Experience/>
         </div>
         <div className="">
-          <RightSide components={components}/>
+          <RightSide education={components}/>
         </div>
       </div>
     </RecoilRoot>

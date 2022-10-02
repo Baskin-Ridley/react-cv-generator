@@ -8,6 +8,17 @@ import {
 } from 'recoil';
 const Education = (props: { id: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
 
+  const id = props.id
+
+  const educationIdAtom = atom({
+    key: `educationIdAtom`,
+    default: {
+      id: id,
+    },
+  });
+
+  const educationId = useRecoilValue(educationIdAtom)
+
   const educationAtom = atom({
     key: `educationAtom${props.id}`,
     default: {
@@ -23,7 +34,7 @@ const Education = (props: { id: string | number | boolean | React.ReactElement<a
 
   return (
     <div>
-      {/* create a form with tailwindcss using the educationatom */}
+      {props.id}
       <form>
         <div className="mb-4">
           <input
@@ -116,7 +127,7 @@ const Education = (props: { id: string | number | boolean | React.ReactElement<a
       >
         Delete
       </button>
-      
+
     </div>
   )
 }

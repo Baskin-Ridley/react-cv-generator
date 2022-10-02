@@ -21,9 +21,7 @@ const personalInfoAtom = atom({
     description: ''
   },
 });
-
 const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
-
 
   return (
     <div>

@@ -10,8 +10,8 @@ import PersonalInfo from '../forms/PersonalInfo';
 
 const RightSide = (props: { components: any[] }) => {
 
-//userecoilstate to get the state of personalInfoAtom
-const personalInfoAtom = atom({
+//personal info
+  const personalInfoAtom = atom({
   key: 'personalInfoAtom',
   default: {
     firstName: '',
@@ -24,9 +24,23 @@ const personalInfoAtom = atom({
 });
 const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
  
+//education
+const educationAtom = atom({
+  key: `educationAtom${props}`,
+  default: {
+    school: '',
+    degree: '',
+    fieldOfStudy: '',
+    from: '',
+    to: ''
+  },
+});
+
+const [educationList, setEducationList] = useRecoilState(educationAtom);
 
   return (
     <div>
+      {props.components.map((component) => component)}
       <div className="bg-green-200 h-40 flex px-5">
         <div>
           <h2 className="text-white mt-6 font-bold text-4xl">{personalInfo.firstName}</h2>
@@ -40,7 +54,7 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
             <p >{personalInfo.description}</p>
             <h2>Education</h2>
             <p>
-            {props.components.map((component) => component)}
+              {educationList.school}
             </p>
           </div>          
         </div>

@@ -7,8 +7,9 @@ const LeftSide = () => {
   return (
     <div>
         <PersonalInfo />
+        <Education/>       
         <Experience/>
-        <Education/>
+
         {/*<AddButton/> temporarily in index.tsx*/}
     </div>
   )

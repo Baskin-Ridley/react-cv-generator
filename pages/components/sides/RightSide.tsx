@@ -38,6 +38,10 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
           <div>
             <h2 className="">Description</h2>
             <p >{personalInfo.description}</p>
+            <h2>Education</h2>
+            <p>
+            {props.components.map((component) => component)}
+            </p>
           </div>          
         </div>
         <div className="bg-red-200 col-span-1 w-full break-words px-5">
@@ -56,10 +60,6 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
           </div>
         </div>
       </div>
-
-
-      
-      {props.components.map((component) => component)}
     </div>
   )
 }

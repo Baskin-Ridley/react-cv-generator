@@ -29,26 +29,26 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
     <div>
       <div className="bg-green-200 h-20">
         <div>
-          <h2>{personalInfo.firstName}</h2>
-          <h3>{personalInfo.lastName}</h3> 
+          <h2 className="text-white text-2xl">{personalInfo.firstName}</h2>
+          <h3 className="text-white text-xl">{personalInfo.lastName}</h3> 
         </div>
       </div>
       <div className="grid grid-cols-5">
-        <div className="bg-blue-200 col-span-4">
+        <div className="bg-blue-200 col-span-4 break-all">
           <div>
             <h2>Description</h2>
-            <p>{personalInfo.description}</p>
+            <p >{personalInfo.description}</p>
           </div>          
         </div>
-        <div className="bg-red-200 col-span-1">
+        <div className="bg-red-200 col-span-1 w-full break-words">
           <h2>Personal Details</h2>
           <div>
             <b>City</b>
             <p>{personalInfo.city}</p>
           </div>
-          <div>
-            <b>Email</b>
-            <p>{personalInfo.email}</p>
+          <div className="">
+            <b className="">Email</b>
+            <p className="">{personalInfo.email}</p>
           </div>
           <div>
             <b>Phone</b>

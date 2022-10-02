@@ -30,7 +30,7 @@ export default function Home() {
           <AddButton onClick={addComponent} text="Add ID"/> 
         </div>
 
-        <div className="hidden lg:block">
+        <div className="">
           <RightSide components = {components}/>
         </div>
       </div>

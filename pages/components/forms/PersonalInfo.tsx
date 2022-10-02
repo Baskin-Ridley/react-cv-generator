@@ -10,8 +10,6 @@ import {
 
 const PersonalInfo = () => {
 
-//create atom for personal info
-
 const personalInfoAtom = atom({
   key: 'personalInfoAtom',
   default: {
@@ -101,7 +99,7 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
             })
           }}
         />
-        <input
+        <textarea
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="description"
           name="description"

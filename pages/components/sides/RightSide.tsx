@@ -12,10 +12,6 @@ const RightSide = (props: {
   cvEducation: any; components: any[] 
 }) => {
 
-  console.log(props.cvEducation[0].props[`id`])
-
-  const [cvEducationList, setCvEducationList] = useState([<CVEducation id={props.cvEducation[0].props[`id`]}/>]);
-
 //personal info
   const personalInfoAtom = atom({
   key: 'personalInfoAtom',
@@ -30,21 +26,6 @@ const RightSide = (props: {
 });
 const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
  
-//education
-const educationAtom = atom({
-  key: `educationAtom`,
-  default: {
-    school: '',
-    degree: '',
-    fieldOfStudy: '',
-    from: '',
-    to: ''
-  },
-});
-
-
-const [educationList, setEducationList] = useRecoilState(educationAtom);
-
   return (
     <div>
 
@@ -60,9 +41,7 @@ const [educationList, setEducationList] = useRecoilState(educationAtom);
             <h2 className="">Description</h2>
             <p >{personalInfo.description}</p>
             <h2>Education</h2>
-            <p>
-              {educationList.school}
-            </p>
+
           </div>          
         </div>
         <div className="bg-red-200 col-span-1 w-full break-words px-5">

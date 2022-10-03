@@ -40,7 +40,7 @@ export default function Home() {
         </div>
         <div className="">
           {cvEducationList.map((component) => component)}
-          <RightSide cvEducation={components}/>
+          <RightSide/>
         </div>
       </div>
     </RecoilRoot>

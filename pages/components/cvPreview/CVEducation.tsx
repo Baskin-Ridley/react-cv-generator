@@ -8,9 +8,7 @@ import {
   } from 'recoil';
 
 const CVEducation = (props: { id: any; }) => {
-    console.log(props[`id`])
     var id=props[`id`]
-    console.log(id)
 
     //education
     const educationAtom = atom({

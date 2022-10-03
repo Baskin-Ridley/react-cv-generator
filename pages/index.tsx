@@ -1,7 +1,4 @@
 import { useState } from "react"
-import LeftSide from "./components/sides/LeftSide"
-import RightSide from "./components/sides/RightSide"
-import Unique from "./components/experimental/Unique"
 import { AddButton } from "./components/buttons/AddButton"
 import PersonalInfo from "./components/forms/PersonalInfo"
 import Education from "./components/forms/Education"

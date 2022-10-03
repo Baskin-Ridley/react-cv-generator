@@ -40,7 +40,6 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
           <div>
             <h2 className="">Description</h2>
             <p >{personalInfo.description}</p>
-            <h2>Education</h2>
 
           </div>          
         </div>

@@ -35,12 +35,15 @@ export default function Home() {
           <PersonalInfo />
           <h2>Education</h2>
           {components.map((component) => component)}
-          <AddButton onClick={addComponent} text="Add Education"/>                  
+          <AddButton onClick={addComponent} text="Add Education"/> 
+          <h2>Experience</h2>                 
           <Experience/>
         </div>
         <div className="">
-          {cvEducationList.map((component) => component)}
           <RightSide/>
+          <h2>Education</h2>
+          {cvEducationList.map((component) => component)}
+          <h2>Experience</h2>
         </div>
       </div>
     </RecoilRoot>

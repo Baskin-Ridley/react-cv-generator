@@ -6,6 +6,7 @@ import { AddButton } from "./components/buttons/AddButton"
 import PersonalInfo from "./components/forms/PersonalInfo"
 import Education from "./components/forms/Education"
 import Experience from "./components/forms/Experience"
+import CVEducation from "./components/cvPreview/CVEducation"
 import { nanoid } from 'nanoid'
 import {
   RecoilRoot,
@@ -16,13 +17,15 @@ import {
 } from 'recoil';
 export default function Home() {
 
-  const [components, setComponents] = useState([<Education id={nanoid()}/>]); 
-  
-  function addComponent() {   
-    setComponents([...components, <Education id={nanoid()}/>]) 
-  } 
+  var id = nanoid()
+  const [components, setComponents] = useState([<Education id={id}/>]); 
+  const [cvEducationList, setCvEducationList] = useState([<CVEducation id={id}/>]);
 
-  console.log({components})
+  function addComponent() {   
+    var id = nanoid()
+    setComponents([...components, <Education id={id}/>])
+    setCvEducationList([...cvEducationList, <CVEducation id={id}/>]) 
+  } 
 
   return (
 
@@ -36,7 +39,8 @@ export default function Home() {
           <Experience/>
         </div>
         <div className="">
-          <RightSide education={components}/>
+          {cvEducationList.map((component) => component)}
+          <RightSide cvEducation={components}/>
         </div>
       </div>
     </RecoilRoot>

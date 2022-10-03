@@ -8,16 +8,6 @@ import {
 } from 'recoil';
 const Education = (props: { id: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
 
-  const id = props.id
-
-  const educationIdAtom = atom({
-    key: `educationIdAtom`,
-    default: {
-      id: id,
-    },
-  });
-
-  const educationId = useRecoilValue(educationIdAtom)
 
   const educationAtom = atom({
     key: `educationAtom${props.id}`,

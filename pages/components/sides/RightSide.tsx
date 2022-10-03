@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
   RecoilRoot,
   atom,
@@ -7,8 +7,14 @@ import {
   useRecoilValue,
 } from 'recoil';
 import PersonalInfo from '../forms/PersonalInfo';
+import CVEducation from '../cvPreview/CVEducation';
+const RightSide = (props: {
+  cvEducation: any; components: any[] 
+}) => {
 
-const RightSide = (props: { components: any[] }) => {
+  console.log(props.cvEducation[0].props[`id`])
+
+  const [cvEducationList, setCvEducationList] = useState([<CVEducation id={props.cvEducation[0].props[`id`]}/>]);
 
 //personal info
   const personalInfoAtom = atom({
@@ -26,7 +32,7 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
  
 //education
 const educationAtom = atom({
-  key: `educationAtom${props}`,
+  key: `educationAtom`,
   default: {
     school: '',
     degree: '',
@@ -36,11 +42,12 @@ const educationAtom = atom({
   },
 });
 
+
 const [educationList, setEducationList] = useRecoilState(educationAtom);
 
   return (
     <div>
-      {props.components.map((component) => component)}
+
       <div className="bg-green-200 h-40 flex px-5">
         <div>
           <h2 className="text-white mt-6 font-bold text-4xl">{personalInfo.firstName}</h2>

@@ -7,7 +7,7 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-const Experience = (props) => {
+const Experience = (props: { id: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
     //create an experience atom
     const experienceAtom = atom({
         key: `experienceAtom${props.id}`,

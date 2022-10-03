@@ -8,6 +8,7 @@ import Education from "./components/forms/Education"
 import Experience from "./components/forms/Experience"
 import CVEducation from "./components/cvPreview/CVEducation"
 import CVExperience from "./components/cvPreview/CVExperience"
+import CVPersonalInfo from "./components/cvPreview/CVPersonalInfo"
 import { nanoid } from 'nanoid'
 import {
   RecoilRoot,
@@ -50,7 +51,7 @@ export default function Home() {
           <AddButton onClick={addExperienceComponent} text="Add Experience"/>
         </div>
         <div className="">
-          <RightSide/>
+          <CVPersonalInfo/>
           <h2>Education</h2>
           {cvEducationList.map((component) => component)}
           <h2>Experience</h2>

@@ -38,7 +38,7 @@ export default function Home() {
 
     <RecoilRoot>
       <div className="grid lg:grid-cols-6 gap-5 sm:grid-cols-1">
-        <div className="border-2 border-blue-500 shadow-lg m-5 p-5  md:col-start-2 md:col-end-4">
+        <div className="border-2 border-blue-500 shadow-lg m-5 p-5  md:col-start-2 md:col-end-4 ">
           <PersonalInfo />
           <h2>Education</h2>
           {components.map((component) => component)}
@@ -48,7 +48,7 @@ export default function Home() {
           <AddButton onClick={addExperienceComponent} text="Add Experience"/>
         </div>
 
-        <div className="border-2 border-black shadow-lg m-5 p-5 md:col-start-4 md:col-end-6">
+        <div className="border-2 border-black shadow-lg m-5 p-5 md:col-start-4 md:col-end-6 h-4/6">
           <CVPersonalInfo/>
           <h2>Education</h2>
           {cvEducationList.map((component) => component)}

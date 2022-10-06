@@ -23,25 +23,31 @@ const CVPersonalInfo = () => {
     
   return (
     <div>
-        <p>
-            {personalInfo.firstName}
-        </p>
-        <p>
-            {personalInfo.lastName}
-        </p>
-        <p>
-            {personalInfo.email}
-        </p>
-        <p>
-            {personalInfo.phone}
-        </p>
-        <p>
-            {personalInfo.city}
-        </p>
-        <p>
-            {personalInfo.description}
-        </p>
-        
+      
+      <div className="flex flex-row place-content-around">
+        <div>
+            <h2 className="text-5xl font-normal leading-normal mt- mb-2 text-blue-500 ">
+                {personalInfo.firstName}
+            </h2>
+            <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blue-500">
+                {personalInfo.lastName}
+            </h3>
+        </div>
+        <div className="flex flex-col ml-4 mt-7">
+            <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
+                {personalInfo.email}
+            </h3>
+            <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
+                {personalInfo.phone}
+            </h3>
+            <h3 className="text-xl font-normal leading-normal mt-0 mb-">
+                {personalInfo.city}
+            </h3>
+        </div>
+      </div>
+      <p>
+        {personalInfo.description}
+      </p>
     </div>
   )
 }

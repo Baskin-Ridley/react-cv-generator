@@ -37,8 +37,8 @@ export default function Home() {
   return (
 
     <RecoilRoot>
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="grid grid-cols-2 ">
+        <div className="border-2 border-blue-500 shadow-lg m-5 p-5 w-1/2">
           <PersonalInfo />
           <h2>Education</h2>
           {components.map((component) => component)}
@@ -47,7 +47,10 @@ export default function Home() {
           {experienceComponents.map((component) => component)}
           <AddButton onClick={addExperienceComponent} text="Add Experience"/>
         </div>
-        <div className="">
+        {/* tailwind blue border with shadow*/}
+
+
+        <div className="border-2 border-black shadow-lg m-5 p-5 w-1/2">
           <CVPersonalInfo/>
           <h2>Education</h2>
           {cvEducationList.map((component) => component)}

@@ -14,11 +14,11 @@ const CVExperience = (props: { id: any; }) => {
     const experienceAtom = atom({
         key: `experienceAtom${id}`,
         default: {
-            company: '',
-            title: '',
-            from: '',
-            to: '',
-            description: ''
+            company: 'FakeBlock',
+            title: 'CEO',
+            from: 'April 2019',
+            to: 'Present',
+            description: 'Founder and CEO of FakeBlock'
         },
     });
 

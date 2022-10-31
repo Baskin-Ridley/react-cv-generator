@@ -28,10 +28,9 @@ const CVPersonalInfo = () => {
     
   return (
     <div>
-    
       <div className="flex flex-row place-content-around">
         <div>
-            <h2 className="text-5xl font-normal leading-normal mt- mb-2 text-blue-500 ">
+            <h2 className="text-5xl font-normal leading-normal mt- mb-2 text-blue-500">
                 {personalInfo.firstName}
             </h2>
             <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blue-500">
@@ -40,20 +39,21 @@ const CVPersonalInfo = () => {
         </div>
         <div className="flex flex-col ml-4 mt-7">
             <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
-              <FontAwesomeIcon icon={faEnvelope}/>
+              <FontAwesomeIcon icon={faEnvelope} className="mr-2"/>
               {personalInfo.email}
             </h3>
             <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
-              <FontAwesomeIcon icon={faPhone}/>
+              <FontAwesomeIcon icon={faPhone} className="mr-2"/>
               {personalInfo.phone}
             </h3>
             <h3 className="text-xl font-normal leading-normal mt-0 mb-">
-              <FontAwesomeIcon icon={faHouse}/>
+              <FontAwesomeIcon icon={faHouse} className="mr-2"/>
               {personalInfo.city}
             </h3>
         </div>
       </div>
-      <p>
+      <p className='ml-2 mb-2 '>
+        <h3 className="text-2xl font-normal leading-normal mt-0 mb-2 text-blue-500">About Me</h3>
         {personalInfo.description}
       </p>
     </div>

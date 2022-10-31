@@ -24,7 +24,7 @@ const CVEducation = (props: { id: any; }) => {
 
     const [educationList, setEducationList] = useRecoilState(educationAtom);
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col ml-2">
             <p>{educationList.school}</p>
             <p>{educationList.degree}</p>
             <p>{educationList.fieldOfStudy}</p>

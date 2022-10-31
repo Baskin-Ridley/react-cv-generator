@@ -24,7 +24,7 @@ const CVExperience = (props: { id: any; }) => {
 
     const [experienceList, setExperienceList] = useRecoilState(experienceAtom);
     return (
-        <div className="flex flex-col">  
+        <div className="flex flex-col ml-2">  
             <p>{experienceList.company}</p>
             <p>{experienceList.title}</p>
             <p>{experienceList.from}</p>

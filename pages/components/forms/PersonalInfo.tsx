@@ -13,12 +13,12 @@ const PersonalInfo = () => {
 const personalInfoAtom = atom({
   key: 'personalInfoAtom',
   default: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    city: '',
-    description: ''
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    email: 'name@email.com',
+    phone: '07975777666',
+    city: 'London',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec dolor eu augue faucibus laoreet. Vivamus at ex nec odio scelerisque sodales ac at neque. Aliquam nec porta erat. Aenean accumsan tempor nunc, et consectetur est malesuada in. Nullam vehicula ante finibus odio congue egestas. Duis mattis mauris ornare'
   },
 });
 const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
@@ -98,6 +98,7 @@ const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
           }}
         />
         <textarea
+          maxlength="300"
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="description"
           name="description"

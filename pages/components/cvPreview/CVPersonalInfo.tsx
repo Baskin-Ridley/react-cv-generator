@@ -21,7 +21,7 @@ const CVPersonalInfo = () => {
           email: 'name@email.com',
           phone: '07975777666',
           city: 'London',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec dolor eu augue faucibus laoreet. Vivamus at ex nec odio scelerisque sodales ac at neque. Aliquam nec porta erat. Aenean accumsan tempor nunc, et consectetur est malesuada in. Nullam vehicula ante finibus odio congue egestas. Duis mattis mauris ornare enim aliquam, a vulputate ligula consequat. Praesent blandit velit tortor, non porttitor neque ultricies ut. Aliquam vulputate, nunc eget maximus tempor, elit odio congue eros, a ornare lectus ligula quis tellus. Aenean pulvinar leo in est accumsan, non dapibus leo laoreet. Aliquam non ante vitae est dignissim dapibus. m'
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec dolor eu augue faucibus laoreet. Vivamus at ex nec odio scelerisque sodales ac at neque. Aliquam nec porta erat. Aenean accumsan tempor nunc, et consectetur est malesuada in. Nullam vehicula ante finibus odio congue egestas. Duis mattis mauris ornare '
         },
       });
     const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)

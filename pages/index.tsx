@@ -50,9 +50,9 @@ export default function Home() {
 
         <div className="border-2 border-black shadow-lg m-5 p-5 md:col-start-4 md:col-end-6 h-4/6">
           <CVPersonalInfo/>
-          <h2>Education</h2>
+          <h3 className="text-2xl font-normal leading-normal mt-0 mb-2 text-blue-500 ml-2">Education</h3>
           {cvEducationList.map((component) => component)}
-          <h2>Experience</h2>
+          <h3 className="text-2xl font-normal leading-normal mt-0 mb-2 text-blue-500 ml-2">Experience</h3>
           {cvExperienceList.map((component) => component)}
         </div>
       </div>

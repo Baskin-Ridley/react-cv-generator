@@ -28,18 +28,20 @@ const CVPersonalInfo = () => {
     
   return (
     <div>
-      <div className="flex flex-row place-content-around">
-        <div>
-            <h2 className="text-5xl font-normal leading-normal mt- mb-2 text-blue-500">
+      {/* tailwind two columns css grid */}
+      <div className="grid grid-cols-2 overflow-hidden ml-2">
+        <div className="overflow-hidden">
+            <h2 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blue-500">
                 {personalInfo.firstName}
             </h2>
-            <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blue-500">
+            <h3 className="text-3xl font-normal leading-normal mt-0 mb-2 text-blue-500">
                 {personalInfo.lastName}
             </h3>
         </div>
-        <div className="flex flex-col ml-4 mt-7">
-            <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2"/>
+        <div className="overflow-hidden">
+          <div className="flex flex-col ml-4 mt-3">
+            <h3 className="text-xl font-normal leading-normal mt-0 mb-0 overflow-hidden">
+              <FontAwesomeIcon icon={faEnvelope} className="mr-2 overflow-hidden"/>
               {personalInfo.email}
             </h3>
             <h3 className="text-xl font-normal leading-normal mt-0 mb-0">
@@ -50,7 +52,9 @@ const CVPersonalInfo = () => {
               <FontAwesomeIcon icon={faHouse} className="mr-2"/>
               {personalInfo.city}
             </h3>
+          </div>
         </div>
+
       </div>
       <p className='ml-2 mb-2 '>
         <h3 className="text-2xl font-normal leading-normal mt-0 mb-2 text-blue-500">About Me</h3>

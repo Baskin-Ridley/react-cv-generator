@@ -13,12 +13,12 @@ const PersonalInfo = () => {
 const personalInfoAtom = atom({
   key: 'personalInfoAtom',
   default: {
-    firstName: 'First Name',
-    lastName: 'Last Name',
-    email: 'name@email.com',
-    phone: '07975777666',
-    city: 'London',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec dolor eu augue faucibus laoreet. Vivamus at ex nec odio scelerisque sodales ac at neque. Aliquam nec porta erat. Aenean accumsan tempor nunc, et consectetur est malesuada in. Nullam vehicula ante finibus odio congue egestas. Duis mattis mauris ornare'
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    city: '',
+    description: ''
   },
 });
 const [personalInfo, setPersonalInfo] = useRecoilState(personalInfoAtom)
